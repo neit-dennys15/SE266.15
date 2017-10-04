@@ -11,20 +11,11 @@ for($rows = 1; $rows <= 10; $rows++){
                 $randNumStr .= $randNum;
             }
 
-            $table .= "<td style='background-color: #$randNumStr; width: 100px; height: 100px; text-align:center;'> $randNumStr <br> <span style='color:white;'> $randNumStr</span></td>";
+            $table .= "<td style='background-color: #$randNumStr; width: 100px; height: 100px; text-align:center; font-size: 20px;'> $randNumStr <br> <span style='color:white;'> $randNumStr</span></td>";
 
         }
 
-
-       // $randNum = mt_rand(0,255);
-        //dechex($randNum);
-
-        //$randNumstr .= $randNum;
-
-        //$ranNum = dechex(rand(0,15));
-
     $table .= "</tr>\n";
-
 }
 
 $table .= "</table>";
