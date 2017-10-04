@@ -1,10 +1,28 @@
 <?php
 $table = "<table>";
-for($rows = 1; $rows <= 9; $rows++){
+for($rows = 1; $rows <= 10; $rows++){
+
+
     $table .= "\t<tr>";
-        for($cols = 1; $cols <= 9; $cols++){
-            $table .= "<td>" . $rows * $cols . "</td>";
+        for($cols = 1; $cols <= 10; $cols++){
+            $randNumStr = "";
+            for($randHex = 1; $randHex <= 6; $randHex++ ){
+                $randNum = dechex(mt_rand(0,15));
+                $randNumStr .= $randNum;
+            }
+
+            $table .= "<td style='background-color: #$randNumStr; width: 100px; height: 100px; text-align:center;'> $randNumStr <br> <span style='color:white;'> $randNumStr</span></td>";
+
         }
+
+
+       // $randNum = mt_rand(0,255);
+        //dechex($randNum);
+
+        //$randNumstr .= $randNum;
+
+        //$ranNum = dechex(rand(0,15));
+
     $table .= "</tr>\n";
 
 }
