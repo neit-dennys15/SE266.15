@@ -38,7 +38,7 @@ if ($submit == "Do It"){
         $sql->execute();
         echo $sql->rowCount() . " rows inserted.";
     }catch(PDOException $e){
-        $e->getMessage();
+        die ("There was a problem retrieving the dogs");
     }
 }
 
