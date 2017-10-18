@@ -21,7 +21,19 @@ include_once ("header.php");
 </form>
 
 <?php
+$db = dbconn();
+$firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING) ?? " ";
+$lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING) ?? " ";
+$dob = filter_input(INPUT_POST, 'dob') ?? " ";
+$height = filter_input(INPUT_POST, 'height', FILTER_SANITIZE_NUMBER_INT) ?? " ";
+$button = "Add";
 
-addActor($db, $firstname, $lastname, $dob, $height);
+switch($action) {
+    case "Add":
+        addActor($db, $firstname, $lastname, $dob, $height);
+        $button = "Add";
+        break;
+}
+
 include_once ("footer.php");
 ?>
