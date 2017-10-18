@@ -6,15 +6,22 @@
  * Time: 2:08 PM
  */
 
-if(isset($_POST['action']))
+include_once ("header.php");
+
 ?>
 
 <form method="post" action="#">
-    First Name: <input type="text" name="firstName" id="firstName"/><br/>
-    Last Name: <input type="text" name="lastName" id="lastName"/><br/>
-    Date of Birth: <input type="date" name="DOB" id="DOB" /><br/>
+    First Name: <input type="text" name="firstName" id="firstname"/><br/>
+    Last Name: <input type="text" name="lastName" id="lastname"/><br/>
+    Date of Birth: <input type="date" name="DOB" id="dob" /><br/>
     Height: <input type="text" name="height" id="height" /><br/>
-    <input type="submit" name="action" value="<?php echo $button; ?>"/>
+    <input type="submit" name="action" value="Add"/>
 
 
 </form>
+
+<?php
+
+addActor($db, $firstname, $lastname, $dob, $height);
+include_once ("footer.php");
+?>
