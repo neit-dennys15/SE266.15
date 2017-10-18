@@ -5,6 +5,8 @@
  * Date: 10/18/2017
  * Time: 2:08 PM
  */
+
+if(isset($_POST['action']))
 ?>
 
 <form method="post" action="#">

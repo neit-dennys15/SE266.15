@@ -8,9 +8,9 @@
 
 function dbconn()
 {
-    $dsn = "mysql:host=localhost;dbname=PHPClassFall2017";
-    $username = "phpclassfall2017";
-    $password = "actors";
+    $dsn = "mysql:host=localhost;dbname=phpclassfall2017";
+    $username = "root";
+    $password = "";
 
     try {
         $db = new PDO($dsn, $username, $password);

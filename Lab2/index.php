@@ -6,8 +6,8 @@
  * Time: 1:56 PM
  */
 /*require_once ("Lab2/dogs.php");*/
-require_once ("Lab2/dbconn.php");
-include_once ("Lab2/header.php");
+require_once ("dbconn.php");
+include_once ("header.php");
 
 $db = dbconn();
 
@@ -16,6 +16,7 @@ $db = dbconn();
 
 
 
-include_once  ("Lab2/actorForm.php");
-include_once ("Lab2/footer.php");
+
+include_once  ("actorForm.php");
+include_once ("footer.php");
 ?>
